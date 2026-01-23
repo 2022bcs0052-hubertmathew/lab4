@@ -3,3 +3,4 @@ joblib
 numpy
 fastapi
 uvicorn
+python-multipart
