@@ -18,6 +18,7 @@ def predict(features: list):
 
     return {
         "name": "Hubert",
-        "roll_no": "YOUR_ROLL_NO",
+        "roll_no": "2022bcs0052",
         "wine_quality": int(round(prediction))
     }
+	

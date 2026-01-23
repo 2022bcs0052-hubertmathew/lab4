@@ -38,4 +38,3 @@ with open("metrics.json", "w") as f:
 
 print("Training completed")
 print(metrics)
-
