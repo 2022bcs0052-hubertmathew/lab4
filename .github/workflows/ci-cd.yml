@@ -76,7 +76,7 @@ jobs:
           docker push ${{ secrets.DOCKER_USERNAME }}/ml-inference:latest
 
       - name: Update Best R2
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           gh variable set BEST_R2 --body "$R2"
-        env:
-          GH_TOKEN: ${{ secrets.GH_PAT }}
