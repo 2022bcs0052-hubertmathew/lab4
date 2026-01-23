@@ -3,8 +3,6 @@ name: ML CI-CD Pipeline
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   train:
@@ -75,3 +73,6 @@ jobs:
           docker build -t ${{ secrets.DOCKER_USERNAME }}/ml-inference:latest .
           docker push ${{ secrets.DOCKER_USERNAME }}/ml-inference:latest
 
+      - name: Log Best R2
+        run: |
+          echo "New BEST R2 is: $R2"
